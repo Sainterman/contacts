@@ -1,0 +1,23 @@
+<h2>Imported contacts: </h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Birthday</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Credit card</th>
+        <th>Franchise</th>
+    </tr>
+    <% @contacts.each do |contact|%>
+        <tr>
+            <th><%=contact.name %></th>
+            <th><%=contact.email %></th>
+            <th><%=contact.birthday %></th>
+            <th><%=contact.phone %></th>
+            <th><%=contact.address %></th>
+            <th><%=contact.credit_card %></th>
+            <th><%=contact.franchise %></th>
+        </tr>
+    <% end %>
+</table>

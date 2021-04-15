@@ -1,0 +1,9 @@
+<h3>Choose the order of the CSV file headers:</h3>
+<%= form_with  url: import_contacts_path, multipart: true do |form| %>
+  <% 6.times do |field| %>
+    <%= form.label "Field #{field + 1}" %>
+    <%= form.select "field_#{field + 1}".to_sym, ["name", "phone", "email", "birthday", "address", "credit_card"] %>
+  <% end %>
+  <%= form.file_field :file %>
+  <%= submit_tag "Upload" %>
+<% end %>
